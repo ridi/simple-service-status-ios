@@ -1,0 +1,5 @@
+target 'SimpleNotifier-Demo' do
+    use_frameworks!
+    pod 'SwiftyUserDefaults', :git => 'https://github.com/ridibooks/SwiftyUserDefaults', :commit => '10fb476'
+    pod 'SimpleNotifier', :path => '../'
+end
