@@ -1,0 +1,22 @@
+# Glob
+.DS_Store
+*~
+*.swp
+*.mchg
+*.pyc
+*.pbxuser
+*.mode1v3
+*.bak
+*.prefs
+*.xcscmblueprint
+*.xccheckout
+xcuserdata
+.svn
+Podfile.lock
+Pods
+fastlane/*.xml
+fastlane/*.md
+build
+APNs
+Preview.html
+Gemfile.lock
