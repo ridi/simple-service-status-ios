@@ -50,6 +50,6 @@ private extension String {
             let to = to16.samePosition(in: self) else {
                 return nil
         }
-        return self.substring(with: from ..< to)
+        return substring(with: from ..< to)
     }
 }
