@@ -26,4 +26,15 @@ extension ViewController: ServiceStatusAlertCheckerDelegate {
         textView.scrollRangeToVisible(NSRange(location: textView.text.characters.count - 1, length: 1))
         return true
     }
+    
+    func alertCheckerEncountered(_ backendError: AlertService.BackendError) {
+        switch backendError {
+        case .network(let error):
+            NSLog(error.localizedDescription)
+        case .jsonSerialization(let error):
+            NSLog(error.localizedDescription)
+        case .objectConstruction(let reason):
+            NSLog(reason)
+        }
+    }
 }

@@ -14,6 +14,8 @@ public protocol ServiceStatusAlertCheckerDelegate: class {
     /// Should return true if the alert is handled, to mark it as handled.
     /// Alerts marked as handled will not invoke this method again.
     func alertCheckerRequiresHandling(of newAlert: AlertService.Alert) -> Bool
+    
+    func alertCheckerEncountered(_ backendError: AlertService.BackendError)
 }
 
 public final class ServiceStatusAlertChecker {
@@ -62,14 +64,13 @@ public extension ServiceStatusAlertChecker {
             }
         }
         
-        let completion = { [weak self] (response: AlertService.ServiceStatusResponse?) in
-            guard response != nil,
-                let strongSelf = self else {
-                    return
-            }
+        let successHandler = { [weak self] (alerts: [AlertService.Alert]) in
             DispatchQueue.main.async {
+                guard let strongSelf = self else {
+                    return
+                }
                 var handledAlerts = Defaults[strongSelf.handledAlertIdsKey]
-                for alert in response!.alerts {
+                for alert in alerts {
                     if !handledAlerts.contains(alert.id) && (strongSelf.delegate?.alertCheckerRequiresHandling(of: alert) ?? false) {
                         handledAlerts.append(alert.id)
                     }
@@ -83,8 +84,12 @@ public extension ServiceStatusAlertChecker {
             }
         }
         
+        let errorHandler = { [weak self] (error: AlertService.BackendError) -> Void in
+            self?.delegate?.alertCheckerEncountered(error)
+        }
+        
         DispatchQueue.global(qos: DispatchQoS.QoSClass.background).async { [weak self] in
-            self?.alertService.check(with: completion)
+            self?.alertService.check(with: successHandler, with: errorHandler)
         }
     }
 }
