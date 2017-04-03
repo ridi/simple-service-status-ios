@@ -21,7 +21,7 @@ class ViewController: UIViewController {
 // MARK: - ServiceStatusAlertCheckerDelegate
 
 extension ViewController: ServiceStatusAlertCheckerDelegate {
-    func shouldHandle(_ alert: AlertService.Alert) -> Bool {
+    func alertCheckerRequiresHandling(of alert: AlertService.Alert) -> Bool {
         textView.text = "\(textView.text ?? "")\n\n\nReceived At: \(Date().description(with: Locale.current))\nID: \(alert.id)\nTitle: \(alert.title)\nType: \(alert.type)\nContents: \(alert.contents)"
         textView.scrollRangeToVisible(NSRange(location: textView.text.characters.count - 1, length: 1))
         return true
