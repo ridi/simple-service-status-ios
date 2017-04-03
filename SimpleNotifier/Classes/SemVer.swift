@@ -15,26 +15,13 @@ public struct SemVer {
     public init(versionString: String) {
         guard let regex = try? NSRegularExpression(pattern: "^([0-9]+)(?:\\.([0-9]+)(?:\\.([0-9]+))?)?"),
             let match = regex.matches(in: versionString, options: [], range: NSRange(location: 0, length: versionString.characters.count)).first else {
-            return
+                return
         }
         
         isValid = true
-        let versionNSString = versionString as NSString
-        
-        let majorRange = match.rangeAt(1)
-        if majorRange.location != NSNotFound {
-            major = versionNSString.substring(with: majorRange)
-        }
-        
-        let minorRange = match.rangeAt(2)
-        if minorRange.location != NSNotFound {
-            minor = versionNSString.substring(with: minorRange)
-        }
-        
-        let patchRange = match.rangeAt(3)
-        if patchRange.location != NSNotFound {
-            patch = versionNSString.substring(with: patchRange)
-        }
+        major = versionString.substring(with: match.rangeAt(1))
+        minor = versionString.substring(with: match.rangeAt(2))
+        patch = versionString.substring(with: match.rangeAt(3))
     }
     
     /// Normalized version string in MAJOR.MINOR.PATCH format of SemVer.
@@ -48,5 +35,17 @@ public struct SemVer {
         } else {
             return "*"
         }
+    }
+}
+
+private extension String {
+    func substring(with nsRange: NSRange) -> String? {
+        guard let from16 = utf16.index(utf16.startIndex, offsetBy: nsRange.location, limitedBy: utf16.endIndex),
+            let to16 = utf16.index(utf16.startIndex, offsetBy: nsRange.location + nsRange.length, limitedBy: utf16.endIndex),
+            let from = from16.samePosition(in: self),
+            let to = to16.samePosition(in: self) else {
+                return nil
+        }
+        return self.substring(with: from ..< to)
     }
 }

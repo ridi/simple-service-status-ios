@@ -55,7 +55,7 @@ public extension ServiceStatusAlertChecker {
         (dispatchCounter, _) = Int.addWithOverflow(dispatchCounter, 1)
         let currentDispatchCounter = dispatchCounter
         let nextCheckTime = DispatchTime.now() + Double(Int64(checkInterval * TimeInterval(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
-        DispatchQueue.main.asyncAfter(deadline: nextCheckTime) { [weak self] () in
+        DispatchQueue.main.asyncAfter(deadline: nextCheckTime) { [weak self] in
             if self?.dispatchCounter == currentDispatchCounter {
                 self?.check()
             }
@@ -64,7 +64,7 @@ public extension ServiceStatusAlertChecker {
         let completion = { [weak self] (response: AlertService.ServiceStatusResponse?) in
             guard response != nil,
                 let strongSelf = self else {
-                return
+                    return
             }
             DispatchQueue.main.async {
                 var handledAlerts = Defaults[strongSelf.handledAlertIdsKey]
@@ -82,7 +82,7 @@ public extension ServiceStatusAlertChecker {
             }
         }
         
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.background).async { [weak self] () in
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.background).async { [weak self] in
             self?.alertService.check(with: completion)
         }
     }
