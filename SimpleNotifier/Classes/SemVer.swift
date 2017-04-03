@@ -24,7 +24,7 @@ public struct SemVer {
         patch = versionString.substring(with: match.rangeAt(3))
     }
     
-    /// Normalized version string in MAJOR.MINOR.PATCH format of SemVer.
+    /// Normalized version string in MAJOR.MINOR.PATCH format of [SemVer](http://semver.org/).
     /// 8 -> 8.0.0
     /// 8.4 -> 8.4.0
     /// 8.4.2_rc1 -> 8.4.2
