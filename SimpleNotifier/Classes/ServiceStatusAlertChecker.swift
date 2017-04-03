@@ -64,7 +64,7 @@ public extension ServiceStatusAlertChecker {
             }
         }
         
-        let successHandler = { [weak self] (alerts: [AlertService.Alert]) in
+        let success = { [weak self] (alerts: [AlertService.Alert]) in
             DispatchQueue.main.async {
                 guard let strongSelf = self else {
                     return
@@ -84,12 +84,12 @@ public extension ServiceStatusAlertChecker {
             }
         }
         
-        let errorHandler = { [weak self] (error: AlertService.BackendError) -> Void in
+        let error = { [weak self] (error: AlertService.BackendError) -> Void in
             self?.delegate?.alertCheckerEncountered(error)
         }
         
         DispatchQueue.global(qos: DispatchQoS.QoSClass.background).async { [weak self] in
-            self?.alertService.check(with: successHandler, with: errorHandler)
+            self?.alertService.check(success: success, error: error)
         }
     }
 }

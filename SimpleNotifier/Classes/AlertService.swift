@@ -80,20 +80,20 @@ public final class AlertService {
 }
 
 extension AlertService {
-    func check(with successHandler: @escaping ([Alert]) -> Void, with errorHandler: @escaping (BackendError) -> Void) {
+    func check(success: @escaping ([Alert]) -> Void, error: @escaping (BackendError) -> Void) {
         let deviceVersion = SemVer(versionString: UIDevice.current.systemVersion).normalizedString
         let appVersion = SemVer(versionString: Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "*").normalizedString
         let parameters = ["device_type": "ios", "device_version": deviceVersion, "app_version": appVersion]
         
         sessionManager.request(apiUrlString, method: .get, parameters: parameters).responseJSON(completionHandler: { response in
-            if let error = response.error {
-                return errorHandler(BackendError.network(error: error))
+            if let networkError = response.error {
+                return error(BackendError.network(error: networkError))
             }
             
             do {
-                try successHandler(ServiceStatusResponse(data: response.data).alerts)
-            } catch {
-                errorHandler(error as! BackendError)
+                try success(ServiceStatusResponse(data: response.data).alerts)
+            } catch let otherError as Error {
+                error(otherError as! BackendError)
             }
         })
     }
