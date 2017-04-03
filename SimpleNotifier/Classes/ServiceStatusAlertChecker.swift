@@ -24,7 +24,7 @@ public final class ServiceStatusAlertChecker {
     fileprivate var dispatchCounter = 0
     fileprivate var isRunning = true
     
-    fileprivate let handledAlertIdsKey = DefaultsKey<[String]>("simple_notifier_handled_alert_ids", [])
+    fileprivate let handledAlertIdsKey = DefaultsKey<[String]>("simple_notifier_handled_alert_ids")
     fileprivate let handledAlertsHistoryCountLimit: Int
     
     public init(apiUrl: String, connectTimeoutInSec: TimeInterval = 10, checkInterval: TimeInterval = 30 * 60, handledAlertsHistoryCountLimit: Int = 25) {

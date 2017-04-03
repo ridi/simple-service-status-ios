@@ -6,15 +6,13 @@ Pod::Spec.new do |spec|
   spec.homepage         = 'https://github.com/ridibooks/simple-notifier-ios'
   spec.source           = { :git => 'https://github.com/ridibooks/simple-notifier-ios.git', :tag => spec.version }
   spec.summary          = 'Simple notifier SDK for iOS'
-  spec.screenshot       = 'screenshot-demo.png'
+  spec.screenshot       = 'https://github.com/ridibooks/simple-notifier-ios/blob/master/screenshot-demo.png'
 
   spec.platform         = :ios
   spec.ios.deployment_target = '8.0'
 
   spec.dependency 'Alamofire', '~> 4.0'
-  # Should use the customized version of SwiftyUserDefaults
-  # Please refer to SimpleNotifier-Demo/Podfile
-  spec.dependency 'SwiftyUserDefaults', '~> 3.0.1'
+  spec.dependency 'SwiftyUserDefaults', '~> 3.0.0'
 
   spec.source_files     = 'SimpleNotifier/Classes/**/*'
 end
