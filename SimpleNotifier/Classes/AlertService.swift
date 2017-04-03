@@ -9,11 +9,11 @@
 import Alamofire
 
 public final class AlertService {
-    fileprivate let apiUrl: String
+    fileprivate let apiUrlString: String
     fileprivate let sessionManager: SessionManager
     
-    init(apiUrl: String, connectTimeoutInSec: TimeInterval = 10) {
-        self.apiUrl = apiUrl
+    init(apiUrlString: String, connectTimeoutInSec: TimeInterval = 10) {
+        self.apiUrlString = apiUrlString
         let configuration = URLSessionConfiguration.default
         configuration.timeoutIntervalForRequest = connectTimeoutInSec
         sessionManager = SessionManager(configuration: configuration)
@@ -73,7 +73,7 @@ extension AlertService {
         let appVersion = SemVer(versionString: Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "*").normalizedString
         let parameters = ["device_type": "ios", "device_version": deviceVersion, "app_version": appVersion]
         
-        sessionManager.request(apiUrl, method: .get, parameters: parameters).responseJSON(completionHandler: { response in
+        sessionManager.request(apiUrlString, method: .get, parameters: parameters).responseJSON(completionHandler: { response in
             if let error = response.error {
                 NSLog(error.localizedDescription)
                 return completion(nil)

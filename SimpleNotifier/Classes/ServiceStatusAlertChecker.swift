@@ -28,8 +28,8 @@ public final class ServiceStatusAlertChecker {
     fileprivate let handledAlertIdsKey = DefaultsKey<[String]>("simple_notifier_handled_alert_ids")
     fileprivate let handledAlertsHistoryCountLimit: Int
     
-    public init(apiUrl: String, connectTimeoutInSec: TimeInterval = 10, checkInterval: TimeInterval = 30 * 60, handledAlertsHistoryCountLimit: Int = 25) {
-        alertService = AlertService(apiUrl: apiUrl, connectTimeoutInSec: connectTimeoutInSec)
+    public init(apiUrlString: String, connectTimeoutInSec: TimeInterval = 10, checkInterval: TimeInterval = 30 * 60, handledAlertsHistoryCountLimit: Int = 25) {
+        alertService = AlertService(apiUrlString: apiUrlString, connectTimeoutInSec: connectTimeoutInSec)
         self.checkInterval = max(checkInterval, 0.01)
         self.handledAlertsHistoryCountLimit = handledAlertsHistoryCountLimit
     }

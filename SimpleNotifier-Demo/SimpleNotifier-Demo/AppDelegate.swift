@@ -13,7 +13,7 @@ import SimpleNotifier
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
-    static let serviceStatusAlertChecker = ServiceStatusAlertChecker(apiUrl: "http://your.url/here", checkInterval: 5, handledAlertsHistoryCountLimit: 3)
+    static let serviceStatusAlertChecker = ServiceStatusAlertChecker(apiUrlString: "http://your.url/here", checkInterval: 5, handledAlertsHistoryCountLimit: 3)
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         AppDelegate.serviceStatusAlertChecker.start()
