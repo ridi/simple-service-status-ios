@@ -29,6 +29,10 @@ public struct SemVer {
     /// 8.4 -> 8.4.0
     /// 8.4.2_rc1 -> 8.4.2
     /// a.b.c (invalid) -> *
+    /// NOTE : this takes valid part only at the beginning (if exists), for example
+    /// 1.*.2 -> 1.0.0
+    /// *.1.2 -> *
+    /// 1.2.* -> 1.2.0
     public var normalizedString: String {
         if isValid {
             return "\(major ?? "0").\(minor ?? "0").\(patch ?? "0")"
