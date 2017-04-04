@@ -6,7 +6,7 @@ Pod::Spec.new do |spec|
   spec.homepage         = 'https://github.com/ridibooks/simple-notifier-ios'
   spec.source           = { :git => 'https://github.com/ridibooks/simple-notifier-ios.git', :tag => spec.version }
   spec.summary          = 'Simple notifier SDK for iOS'
-  spec.screenshot       = 'https://github.com/ridibooks/simple-notifier-ios/blob/master/screenshot-demo.png'
+  spec.screenshot       = 'https://raw.githubusercontent.com/ridibooks/simple-notifier-ios/master/screenshot-demo.png'
 
   spec.platform         = :ios
   spec.ios.deployment_target = '8.0'
