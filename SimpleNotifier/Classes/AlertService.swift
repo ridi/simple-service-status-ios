@@ -92,7 +92,7 @@ extension AlertService {
             
             do {
                 try success(ServiceStatusResponse(data: response.data).alerts)
-            } catch let otherError as Error {
+            } catch let otherError {
                 error(otherError as! BackendError)
             }
         })
