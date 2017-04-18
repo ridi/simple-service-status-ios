@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name             = 'SimpleNotifier'
-  spec.version          = '0.1.0'
+  spec.version          = '1.0.0'
   spec.authors          = { 'Ridibooks Viewer Team' => 'viewer.team@ridi.com' }
   spec.license          = { :type => 'MIT', :file => 'LICENSE' }
   spec.homepage         = 'https://github.com/ridibooks/simple-notifier-ios'

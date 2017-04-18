@@ -16,7 +16,7 @@ You need to install the [CocoaPods](https://cocoapods.org/) to add this library 
 
 Add the line below to the Podfile of your project.
 
-> pod 'SimpleNotifier', :git => 'https://github.com/ridibooks/simple-notifier-ios', :tag => '0.1.0'
+> pod 'SimpleNotifier'
 
 From terminal, navigate to the directory containing the Podfile, then
 
