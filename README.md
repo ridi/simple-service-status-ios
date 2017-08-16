@@ -1,4 +1,4 @@
-# [SimpleServiceStatus](https://github.com/ridi/simple-service-status-ios) Client for iOS
+# [SimpleServiceStatus](https://github.com/ridi/simple-service-status) Client for iOS
 
 ![Screenshot of the demo project](screenshot-demo.png)
 
