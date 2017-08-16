@@ -1,4 +1,4 @@
-# [SimpleNotifier](https://github.com/ridibooks/simple-notifier) Client for iOS
+# [SimpleServiceStatus](https://github.com/ridi/simple-service-status-ios) Client for iOS
 
 ![Screenshot of the demo project](screenshot-demo.png)
 
@@ -16,10 +16,10 @@ You need to install the [CocoaPods](https://cocoapods.org/) to add this library 
 
 Add the line below to the Podfile of your project.
 
-> pod 'SimpleNotifier'
+> pod 'SimpleServiceStatus'
 
 From terminal, navigate to the directory containing the Podfile, then
 
 > pod install
 
-For more details, please have a look at the SimpleNotifier-Demo Xcode project in this repository, and the podspec file.
+For more details, please have a look at the SimpleServiceStatus-Demo Xcode project in this repository, and the podspec file.

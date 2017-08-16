@@ -1,20 +1,20 @@
 //
 //  AppDelegate.swift
-//  SimpleNotifier-Demo
+//  SimpleServiceStatus-Demo
 //
 //  Created by kgwangrae on 2017. 3. 30..
 //  Copyright © 2017년 Ridibooks. All rights reserved.
 //
 
 import UIKit
-import SimpleNotifier
+import SimpleServiceStatus
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     /// Checks every minute
-    static let serviceStatusAlertChecker = ServiceStatusAlertChecker(apiUrlString: "http://your.url/here", checkInterval: 60, handledAlertsHistoryCountLimit: 3)
+    static let serviceStatusAlertChecker = ServiceStatusAlertChecker(apiUrlString: "http://localhost:8080/api/v1/status/check", checkInterval: 60, handledAlertsHistoryCountLimit: 3)
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         /// Checks when the application enters foreground

@@ -12,20 +12,20 @@
 		0ECFA78C1E8C9BB100E2641C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ECFA78A1E8C9BB100E2641C /* Main.storyboard */; };
 		0ECFA78E1E8C9BB100E2641C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ECFA78D1E8C9BB100E2641C /* Assets.xcassets */; };
 		0ECFA7911E8C9BB100E2641C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ECFA78F1E8C9BB100E2641C /* LaunchScreen.storyboard */; };
-		A925F2A9BB7971D1CB4C7326 /* Pods_SimpleNotifier_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 513C10249B5D42A193530C0F /* Pods_SimpleNotifier_Demo.framework */; };
+		A925F2A9BB7971D1CB4C7326 /* Pods_SimpleServiceStatus_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 513C10249B5D42A193530C0F /* Pods_SimpleServiceStatus_Demo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0ECFA7831E8C9BB100E2641C /* SimpleNotifier-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SimpleNotifier-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ECFA7831E8C9BB100E2641C /* SimpleServiceStatus-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SimpleServiceStatus-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ECFA7861E8C9BB100E2641C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0ECFA7881E8C9BB100E2641C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0ECFA78B1E8C9BB100E2641C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0ECFA78D1E8C9BB100E2641C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0ECFA7901E8C9BB100E2641C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0ECFA7921E8C9BB100E2641C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3F6576071E626EF63F2A6253 /* Pods-SimpleNotifier-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleNotifier-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleNotifier-Demo/Pods-SimpleNotifier-Demo.debug.xcconfig"; sourceTree = "<group>"; };
-		513C10249B5D42A193530C0F /* Pods_SimpleNotifier_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleNotifier_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		85FA58178B9307DD965160B5 /* Pods-SimpleNotifier-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleNotifier-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleNotifier-Demo/Pods-SimpleNotifier-Demo.release.xcconfig"; sourceTree = "<group>"; };
+		3F6576071E626EF63F2A6253 /* Pods-SimpleServiceStatus-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleServiceStatus-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleServiceStatus-Demo/Pods-SimpleServiceStatus-Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		513C10249B5D42A193530C0F /* Pods_SimpleServiceStatus_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleServiceStatus_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85FA58178B9307DD965160B5 /* Pods-SimpleServiceStatus-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleServiceStatus-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleServiceStatus-Demo/Pods-SimpleServiceStatus-Demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,7 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A925F2A9BB7971D1CB4C7326 /* Pods_SimpleNotifier_Demo.framework in Frameworks */,
+				A925F2A9BB7971D1CB4C7326 /* Pods_SimpleServiceStatus_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,7 +43,7 @@
 		0ECFA77A1E8C9BB100E2641C = {
 			isa = PBXGroup;
 			children = (
-				0ECFA7851E8C9BB100E2641C /* SimpleNotifier-Demo */,
+				0ECFA7851E8C9BB100E2641C /* SimpleServiceStatus-Demo */,
 				0ECFA7841E8C9BB100E2641C /* Products */,
 				665E8F5030924381BDCBF325 /* Pods */,
 				3B8783674F5FE98C0A258119 /* Frameworks */,
@@ -53,12 +53,12 @@
 		0ECFA7841E8C9BB100E2641C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0ECFA7831E8C9BB100E2641C /* SimpleNotifier-Demo.app */,
+				0ECFA7831E8C9BB100E2641C /* SimpleServiceStatus-Demo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0ECFA7851E8C9BB100E2641C /* SimpleNotifier-Demo */ = {
+		0ECFA7851E8C9BB100E2641C /* SimpleServiceStatus-Demo */ = {
 			isa = PBXGroup;
 			children = (
 				0ECFA7861E8C9BB100E2641C /* AppDelegate.swift */,
@@ -68,13 +68,13 @@
 				0ECFA78F1E8C9BB100E2641C /* LaunchScreen.storyboard */,
 				0ECFA7921E8C9BB100E2641C /* Info.plist */,
 			);
-			path = "SimpleNotifier-Demo";
+			path = "SimpleServiceStatus-Demo";
 			sourceTree = "<group>";
 		};
 		3B8783674F5FE98C0A258119 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				513C10249B5D42A193530C0F /* Pods_SimpleNotifier_Demo.framework */,
+				513C10249B5D42A193530C0F /* Pods_SimpleServiceStatus_Demo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -82,8 +82,8 @@
 		665E8F5030924381BDCBF325 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3F6576071E626EF63F2A6253 /* Pods-SimpleNotifier-Demo.debug.xcconfig */,
-				85FA58178B9307DD965160B5 /* Pods-SimpleNotifier-Demo.release.xcconfig */,
+				3F6576071E626EF63F2A6253 /* Pods-SimpleServiceStatus-Demo.debug.xcconfig */,
+				85FA58178B9307DD965160B5 /* Pods-SimpleServiceStatus-Demo.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -91,9 +91,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0ECFA7821E8C9BB100E2641C /* SimpleNotifier-Demo */ = {
+		0ECFA7821E8C9BB100E2641C /* SimpleServiceStatus-Demo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0ECFA7AB1E8C9BB100E2641C /* Build configuration list for PBXNativeTarget "SimpleNotifier-Demo" */;
+			buildConfigurationList = 0ECFA7AB1E8C9BB100E2641C /* Build configuration list for PBXNativeTarget "SimpleServiceStatus-Demo" */;
 			buildPhases = (
 				9C9DD9F7570924EFD9419AD9 /* [CP] Check Pods Manifest.lock */,
 				0EA91D3B1E8DFFC700A5E70F /* Run Script */,
@@ -107,9 +107,9 @@
 			);
 			dependencies = (
 			);
-			name = "SimpleNotifier-Demo";
-			productName = "SimpleNotifier-Demo";
-			productReference = 0ECFA7831E8C9BB100E2641C /* SimpleNotifier-Demo.app */;
+			name = "SimpleServiceStatus-Demo";
+			productName = "SimpleServiceStatus-Demo";
+			productReference = 0ECFA7831E8C9BB100E2641C /* SimpleServiceStatus-Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -128,7 +128,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0ECFA77E1E8C9BB100E2641C /* Build configuration list for PBXProject "SimpleNotifier-Demo" */;
+			buildConfigurationList = 0ECFA77E1E8C9BB100E2641C /* Build configuration list for PBXProject "SimpleServiceStatus-Demo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -141,7 +141,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0ECFA7821E8C9BB100E2641C /* SimpleNotifier-Demo */,
+				0ECFA7821E8C9BB100E2641C /* SimpleServiceStatus-Demo */,
 			);
 		};
 /* End PBXProject section */
@@ -186,7 +186,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleNotifier-Demo/Pods-SimpleNotifier-Demo-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleServiceStatus-Demo/Pods-SimpleServiceStatus-Demo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		707A47BF5B6C9532B3CDA2C6 /* [CP] Embed Pods Frameworks */ = {
@@ -195,13 +195,20 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SimpleServiceStatus-Demo/Pods-SimpleServiceStatus-Demo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SimpleServiceStatus/SimpleServiceStatus.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SimpleServiceStatus.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUserDefaults.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleNotifier-Demo/Pods-SimpleNotifier-Demo-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleServiceStatus-Demo/Pods-SimpleServiceStatus-Demo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9C9DD9F7570924EFD9419AD9 /* [CP] Check Pods Manifest.lock */ = {
@@ -210,13 +217,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SimpleServiceStatus-Demo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -348,12 +358,12 @@
 		};
 		0ECFA7AC1E8C9BB100E2641C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3F6576071E626EF63F2A6253 /* Pods-SimpleNotifier-Demo.debug.xcconfig */;
+			baseConfigurationReference = 3F6576071E626EF63F2A6253 /* Pods-SimpleServiceStatus-Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "SimpleNotifier-Demo/Info.plist";
+				INFOPLIST_FILE = "SimpleServiceStatus-Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ridi.SimpleNotifier-Demo";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ridi.SimpleServiceStatus-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -361,12 +371,12 @@
 		};
 		0ECFA7AD1E8C9BB100E2641C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 85FA58178B9307DD965160B5 /* Pods-SimpleNotifier-Demo.release.xcconfig */;
+			baseConfigurationReference = 85FA58178B9307DD965160B5 /* Pods-SimpleServiceStatus-Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "SimpleNotifier-Demo/Info.plist";
+				INFOPLIST_FILE = "SimpleServiceStatus-Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ridi.SimpleNotifier-Demo";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ridi.SimpleServiceStatus-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -375,7 +385,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0ECFA77E1E8C9BB100E2641C /* Build configuration list for PBXProject "SimpleNotifier-Demo" */ = {
+		0ECFA77E1E8C9BB100E2641C /* Build configuration list for PBXProject "SimpleServiceStatus-Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0ECFA7A91E8C9BB100E2641C /* Debug */,
@@ -384,7 +394,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0ECFA7AB1E8C9BB100E2641C /* Build configuration list for PBXNativeTarget "SimpleNotifier-Demo" */ = {
+		0ECFA7AB1E8C9BB100E2641C /* Build configuration list for PBXNativeTarget "SimpleServiceStatus-Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0ECFA7AC1E8C9BB100E2641C /* Debug */,
