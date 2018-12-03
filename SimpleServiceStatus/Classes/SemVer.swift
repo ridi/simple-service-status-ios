@@ -1,11 +1,3 @@
-//
-//  SemVer.swift
-//  Ridibooks
-//
-//  Created by kgwangrae on 2017. 3. 30..
-//  Copyright © 2017년 Ridibooks. All rights reserved.
-//
-
 public struct SemVer {
     private(set) var isValid = false
     private(set) var major: String?
@@ -13,8 +5,9 @@ public struct SemVer {
     private(set) var patch: String?
     
     public init(versionString: String) {
+        let range = NSRange(location: 0, length: versionString.count)
         guard let regex = try? NSRegularExpression(pattern: "^([0-9]+)(?:\\.([0-9]+)(?:\\.([0-9]+))?)?"),
-            let match = regex.matches(in: versionString, options: [], range: NSRange(location: 0, length: versionString.characters.count)).first else {
+            let match = regex.matches(in: versionString, options: [], range: range).first else {
                 return
         }
         
@@ -44,12 +37,14 @@ public struct SemVer {
 
 private extension String {
     func substring(with nsRange: NSRange) -> String? {
-        guard let from16 = utf16.index(utf16.startIndex, offsetBy: nsRange.location, limitedBy: utf16.endIndex),
-            let to16 = utf16.index(utf16.startIndex, offsetBy: nsRange.location + nsRange.length, limitedBy: utf16.endIndex),
+        let startIndex = utf16.startIndex
+        let endIndex = utf8.endIndex
+        guard let from16 = utf16.index(startIndex, offsetBy: nsRange.location, limitedBy: endIndex),
+            let to16 = utf16.index(startIndex, offsetBy: nsRange.location + nsRange.length, limitedBy: endIndex),
             let from = from16.samePosition(in: self),
             let to = to16.samePosition(in: self) else {
                 return nil
         }
-        return substring(with: from ..< to)
+        return substring(with: from..<to)
     }
 }

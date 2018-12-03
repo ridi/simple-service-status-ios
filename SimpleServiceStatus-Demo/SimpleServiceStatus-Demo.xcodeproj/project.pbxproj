@@ -96,7 +96,7 @@
 			buildConfigurationList = 0ECFA7AB1E8C9BB100E2641C /* Build configuration list for PBXNativeTarget "SimpleServiceStatus-Demo" */;
 			buildPhases = (
 				9C9DD9F7570924EFD9419AD9 /* [CP] Check Pods Manifest.lock */,
-				0EA91D3B1E8DFFC700A5E70F /* Run Script */,
+				0EA91D3B1E8DFFC700A5E70F /* Swiftlint Script */,
 				0ECFA77F1E8C9BB100E2641C /* Sources */,
 				0ECFA7801E8C9BB100E2641C /* Frameworks */,
 				0ECFA7811E8C9BB100E2641C /* Resources */,
@@ -160,34 +160,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0EA91D3B1E8DFFC700A5E70F /* Run Script */ = {
+		0EA91D3B1E8DFFC700A5E70F /* Swiftlint Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Run Script";
+			name = "Swiftlint Script";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd ..\nswiftlint";
-		};
-		24558BCDDA05CFA11630133F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleServiceStatus-Demo/Pods-SimpleServiceStatus-Demo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "function toVersion { echo -e \"$@\" | awk -F. '{ printf(\"%d%03d%03d%03d\", $1,$2,$3,$4); }'; }\nif which swiftlint >/dev/null; then\ncurrent=$(swiftlint version)\nrequire=\"0.27.0\"\n    if [ $(toVersion \"$current\") -ge $(toVersion \"$require\") ]; then\n        cd \"${PROJECT_DIR}/../\"\n        swiftlint\n    else\n        echo \"SwiftLint requires a SwiftLint version of >= $require. You are on $current.\"\n        echo \"Please update using 'brew upgrade swiftlint'.\"\n        exit 101\n    fi\nelse\n    echo \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\n    exit 100\nfi\n";
 		};
 		707A47BF5B6C9532B3CDA2C6 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;

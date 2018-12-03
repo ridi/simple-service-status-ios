@@ -1,11 +1,3 @@
-//
-//  ServiceStatusAlertChecker.swift
-//  Ridibooks
-//
-//  Created by kgwangrae on 2017. 3. 30..
-//  Copyright © 2017년 Ridibooks. All rights reserved.
-//
-
 import Alamofire
 import SwiftyUserDefaults
 
@@ -30,7 +22,12 @@ public final class ServiceStatusAlertChecker {
     fileprivate let handledAlertIdsKey = DefaultsKey<[String]>("simple_notifier_handled_alert_ids")
     fileprivate let handledAlertsHistoryCountLimit: Int
     
-    public init(apiUrlString: String, connectTimeoutInSec: TimeInterval = 10, checkInterval: TimeInterval = 30 * 60, handledAlertsHistoryCountLimit: Int = 25) {
+    public init(
+        apiUrlString: String,
+        connectTimeoutInSec: TimeInterval = 10,
+        checkInterval: TimeInterval = 30 * 60,
+        handledAlertsHistoryCountLimit: Int = 25
+    ) {
         alertService = AlertService(apiUrlString: apiUrlString, connectTimeoutInSec: connectTimeoutInSec)
         self.checkInterval = max(checkInterval, 0.01)
         self.handledAlertsHistoryCountLimit = handledAlertsHistoryCountLimit
@@ -57,7 +54,8 @@ public extension ServiceStatusAlertChecker {
         
         (dispatchCounter, _) = Int.addWithOverflow(dispatchCounter, 1)
         let currentDispatchCounter = dispatchCounter
-        let nextCheckTime = DispatchTime.now() + Double(Int64(checkInterval * TimeInterval(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+        let nextCheckTime =
+            DispatchTime.now() + Double(Int64(checkInterval * TimeInterval(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
         DispatchQueue.main.asyncAfter(deadline: nextCheckTime) { [weak self] in
             if self?.dispatchCounter == currentDispatchCounter {
                 self?.check()
@@ -71,8 +69,9 @@ public extension ServiceStatusAlertChecker {
                 }
                 var handledAlerts = Defaults[strongSelf.handledAlertIdsKey]
                 for alert in alerts {
-                    if !handledAlerts.contains(alert.id) && (strongSelf.delegate?.alertCheckerRequiresHandling(of: alert) ?? false) {
-                        handledAlerts.append(alert.id)
+                    if !handledAlerts.contains(alert.id),
+                        (strongSelf.delegate?.alertCheckerRequiresHandling(of: alert) ?? false) {
+                            handledAlerts.append(alert.id)
                     }
                 }
                 let exceedingCapacity = handledAlerts.count - strongSelf.handledAlertsHistoryCountLimit

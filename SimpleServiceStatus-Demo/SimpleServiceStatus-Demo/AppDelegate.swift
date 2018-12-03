@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  SimpleServiceStatus-Demo
-//
-//  Created by kgwangrae on 2017. 3. 30..
-//  Copyright © 2017년 Ridibooks. All rights reserved.
-//
-
 import UIKit
 import SimpleServiceStatus
 

@@ -1,11 +1,3 @@
-//
-//  AlertService.swift
-//  Ridibooks
-//
-//  Created by kgwangrae on 2017. 3. 30..
-//  Copyright © 2017년 Ridibooks. All rights reserved.
-//
-
 import Alamofire
 
 public final class AlertService {
@@ -38,7 +30,8 @@ public final class AlertService {
         
         init(rawAlert: [String: Any]) throws {
             guard let type = Type(rawValue: rawAlert["type"] as? String ?? "") else {
-                throw BackendError.objectConstruction(reason: "Invalid alert type - should be one of the constants from Alert.Type")
+                let reason = "Invalid alert type - should be one of the constants from Alert.Type"
+                throw BackendError.objectConstruction(reason: reason)
             }
             self.type = type
             id = rawAlert["id"] as? String ?? ""
@@ -82,19 +75,21 @@ public final class AlertService {
 extension AlertService {
     func check(success: @escaping ([Alert]) -> Void, error: @escaping (BackendError) -> Void) {
         let deviceVersion = SemVer(versionString: UIDevice.current.systemVersion).normalizedString
-        let appVersion = SemVer(versionString: Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "*").normalizedString
+        let shortVersionString = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "*"
+        let appVersion = SemVer(versionString: shortVersionString).normalizedString
         let parameters = ["device_type": "ios", "device_version": deviceVersion, "app_version": appVersion]
         
-        sessionManager.request(apiUrlString, method: .get, parameters: parameters).responseJSON(completionHandler: { response in
-            if let networkError = response.error {
-                return error(BackendError.network(error: networkError))
-            }
-            
-            do {
-                try success(ServiceStatusResponse(data: response.data).alerts)
-            } catch let otherError {
-                error(otherError as! BackendError)
-            }
-        })
+        sessionManager.request(apiUrlString, method: .get, parameters: parameters)
+            .responseJSON(completionHandler: { response in
+                if let networkError = response.error {
+                    return error(BackendError.network(error: networkError))
+                }
+                
+                do {
+                    try success(ServiceStatusResponse(data: response.data).alerts)
+                } catch let otherError {
+                    error(otherError as! BackendError)
+                }
+            })
     }
 }
