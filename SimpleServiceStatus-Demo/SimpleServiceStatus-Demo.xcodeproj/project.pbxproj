@@ -101,7 +101,6 @@
 				0ECFA7801E8C9BB100E2641C /* Frameworks */,
 				0ECFA7811E8C9BB100E2641C /* Resources */,
 				707A47BF5B6C9532B3CDA2C6 /* [CP] Embed Pods Frameworks */,
-				24558BCDDA05CFA11630133F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -133,6 +132,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -180,7 +180,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SimpleServiceStatus-Demo/Pods-SimpleServiceStatus-Demo-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-SimpleServiceStatus-Demo/Pods-SimpleServiceStatus-Demo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/SimpleServiceStatus/SimpleServiceStatus.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
@@ -193,7 +193,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleServiceStatus-Demo/Pods-SimpleServiceStatus-Demo-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SimpleServiceStatus-Demo/Pods-SimpleServiceStatus-Demo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9C9DD9F7570924EFD9419AD9 /* [CP] Check Pods Manifest.lock */ = {
@@ -366,7 +366,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ridi.SimpleServiceStatus-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -379,7 +379,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ridi.SimpleServiceStatus-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

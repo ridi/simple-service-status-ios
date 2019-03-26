@@ -4,8 +4,8 @@
 
 ## Requirements
 
-- Xcode 8.0+
-- Swift 3
+- Xcode 10.2+
+- Swift 4.2
 - iOS8+
 
 ## Getting Started

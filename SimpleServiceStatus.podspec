@@ -11,7 +11,7 @@ Pod::Spec.new do |spec|
   spec.platform         = :ios
   spec.ios.deployment_target = '8.0'
 
-  spec.dependency 'Alamofire', '~> 4.0'
+  spec.dependency 'Alamofire', '~> 4.7'
   spec.dependency 'SwiftyUserDefaults', '~> 3.0.0'
 
   spec.source_files     = 'SimpleServiceStatus/Classes/**/*'
