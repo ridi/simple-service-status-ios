@@ -1,7 +1,7 @@
 import Alamofire
 import SwiftyUserDefaults
 
-public protocol ServiceStatusAlertCheckerDelegate: class {
+public protocol ServiceStatusAlertCheckerDelegate: AnyObject {
     /// Called when a new alert is available.
     /// Should return true if the alert is handled, to mark it as handled.
     /// Alerts marked as handled will not invoke this method again.
@@ -52,7 +52,7 @@ public extension ServiceStatusAlertChecker {
             return
         }
         
-        (dispatchCounter, _) = Int.addWithOverflow(dispatchCounter, 1)
+        (dispatchCounter, _) = dispatchCounter.addingReportingOverflow(1)
         let currentDispatchCounter = dispatchCounter
         let nextCheckTime =
             DispatchTime.now() + Double(Int64(checkInterval * TimeInterval(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)

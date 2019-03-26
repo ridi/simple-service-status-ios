@@ -8,9 +8,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     /// Checks every minute
     static let serviceStatusAlertChecker = ServiceStatusAlertChecker(apiUrlString: "http://localhost:8080/api/v1/status/check", checkInterval: 60, handledAlertsHistoryCountLimit: 3)
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    private func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         /// Checks when the application enters foreground
-        NotificationCenter.default.addObserver(AppDelegate.serviceStatusAlertChecker, selector: #selector(AppDelegate.serviceStatusAlertChecker.check), name: .UIApplicationWillEnterForeground, object: nil)
+        NotificationCenter.default.addObserver(AppDelegate.serviceStatusAlertChecker, selector: #selector(AppDelegate.serviceStatusAlertChecker.check), name: UIApplication.willEnterForegroundNotification, object: nil)
         
         AppDelegate.serviceStatusAlertChecker.start()
         return true

@@ -12,9 +12,9 @@ public struct SemVer {
         }
         
         isValid = true
-        major = versionString.substring(with: match.rangeAt(1))
-        minor = versionString.substring(with: match.rangeAt(2))
-        patch = versionString.substring(with: match.rangeAt(3))
+        major = versionString.substring(with: match.range(at: 1))
+        minor = versionString.substring(with: match.range(at: 2))
+        patch = versionString.substring(with: match.range(at: 3))
     }
     
     /// Normalized version string in MAJOR.MINOR.PATCH format of [SemVer](http://semver.org/).
@@ -45,6 +45,6 @@ private extension String {
             let to = to16.samePosition(in: self) else {
                 return nil
         }
-        return substring(with: from..<to)
+        return String(self[from..<to])
     }
 }
