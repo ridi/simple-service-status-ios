@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name             = 'SimpleServiceStatus'
-  spec.version          = '1.1.0'
+  spec.version          = '1.2.0'
   spec.authors          = { 'Ridibooks Viewer Team' => 'viewer.team@ridi.com' }
   spec.license          = { :type => 'MIT', :file => 'LICENSE' }
   spec.homepage         = 'https://github.com/ridi/simple-service-status-ios'
@@ -12,7 +12,7 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target = '8.0'
 
   spec.dependency 'Alamofire', '~> 4.7'
-  spec.dependency 'SwiftyUserDefaults', '~> 3.0.0'
+  spec.dependency 'SwiftyUserDefaults', '~> 4.0'
 
   spec.source_files     = 'SimpleServiceStatus/Classes/**/*'
 end
