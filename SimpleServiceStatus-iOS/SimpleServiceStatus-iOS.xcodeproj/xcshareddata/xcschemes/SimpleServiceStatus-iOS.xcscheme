@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2A2CEDF822F85C32004B46FE"
-               BuildableName = "SimpleServiceStatus_iOS.framework"
-               BlueprintName = "SimpleServiceStatus-iOS"
+               BuildableName = "SimpleServiceStatus.framework"
+               BlueprintName = "SimpleServiceStatus"
                ReferencedContainer = "container:SimpleServiceStatus-iOS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,8 +46,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2A2CEDF822F85C32004B46FE"
-            BuildableName = "SimpleServiceStatus_iOS.framework"
-            BlueprintName = "SimpleServiceStatus-iOS"
+            BuildableName = "SimpleServiceStatus.framework"
+            BlueprintName = "SimpleServiceStatus"
             ReferencedContainer = "container:SimpleServiceStatus-iOS.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -64,8 +64,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2A2CEDF822F85C32004B46FE"
-            BuildableName = "SimpleServiceStatus_iOS.framework"
-            BlueprintName = "SimpleServiceStatus-iOS"
+            BuildableName = "SimpleServiceStatus.framework"
+            BlueprintName = "SimpleServiceStatus"
             ReferencedContainer = "container:SimpleServiceStatus-iOS.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

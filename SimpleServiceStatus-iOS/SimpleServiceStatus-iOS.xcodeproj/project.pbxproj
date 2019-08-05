@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2A2CEDF922F85C32004B46FE /* SimpleServiceStatus_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SimpleServiceStatus_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A2CEDF922F85C32004B46FE /* SimpleServiceStatus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SimpleServiceStatus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A2CEDFC22F85C32004B46FE /* SimpleServiceStatus_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleServiceStatus_iOS.h; sourceTree = "<group>"; };
 		2A2CEDFD22F85C32004B46FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A2CEE0522F85C3E004B46FE /* AlertService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
@@ -51,7 +51,7 @@
 		2A2CEDFA22F85C32004B46FE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2A2CEDF922F85C32004B46FE /* SimpleServiceStatus_iOS.framework */,
+				2A2CEDF922F85C32004B46FE /* SimpleServiceStatus.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,9 +100,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		2A2CEDF822F85C32004B46FE /* SimpleServiceStatus-iOS */ = {
+		2A2CEDF822F85C32004B46FE /* SimpleServiceStatus */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2A2CEE0122F85C32004B46FE /* Build configuration list for PBXNativeTarget "SimpleServiceStatus-iOS" */;
+			buildConfigurationList = 2A2CEE0122F85C32004B46FE /* Build configuration list for PBXNativeTarget "SimpleServiceStatus" */;
 			buildPhases = (
 				2A2CEDF422F85C32004B46FE /* Headers */,
 				2A2CEDF522F85C32004B46FE /* Sources */,
@@ -113,9 +113,9 @@
 			);
 			dependencies = (
 			);
-			name = "SimpleServiceStatus-iOS";
+			name = SimpleServiceStatus;
 			productName = "SimpleServiceStatus-iOS";
-			productReference = 2A2CEDF922F85C32004B46FE /* SimpleServiceStatus_iOS.framework */;
+			productReference = 2A2CEDF922F85C32004B46FE /* SimpleServiceStatus.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -144,7 +144,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2A2CEDF822F85C32004B46FE /* SimpleServiceStatus-iOS */,
+				2A2CEDF822F85C32004B46FE /* SimpleServiceStatus */,
 			);
 		};
 /* End PBXProject section */
@@ -225,7 +225,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -283,7 +283,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -357,7 +357,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2A2CEE0122F85C32004B46FE /* Build configuration list for PBXNativeTarget "SimpleServiceStatus-iOS" */ = {
+		2A2CEE0122F85C32004B46FE /* Build configuration list for PBXNativeTarget "SimpleServiceStatus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2A2CEE0222F85C32004B46FE /* Debug */,
