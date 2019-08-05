@@ -1,3 +1,5 @@
+import Foundation
+
 public struct SemVer {
     private(set) var isValid = false
     private(set) var major: String?

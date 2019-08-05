@@ -1,4 +1,5 @@
 import Alamofire
+import UIKit
 
 public final class AlertService {
     fileprivate let apiUrlString: String
